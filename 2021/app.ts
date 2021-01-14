@@ -36,7 +36,7 @@ class AppCtrl {
     private $filter
   ) {
     this.params = {
-      capital: { name: "Capital", min: 0, max: 2000, step: 100, value: 0 },
+      capital: { name: "Capital", min: 0, max: 2000, step: 100, value: 1000 },
       charges: {
         name: "Charges",
         min: 0,
@@ -44,10 +44,10 @@ class AppCtrl {
         step: 500,
         value: 0
       },
-      ca: { name: "C.A", min: 0, max: 250000, step: 1000, value: 0 },
-      nbMois: { name: "Nb Mois", min: 0, max: 18, step: 6, value: 18 },
+      ca: { name: "C.A", min: 0, max: 250000, step: 1000, value: 84000 },
+      nbMois: { name: "Nb Mois", min: 0, max: 12, step: 1, value: 12 },
       remuneration: {
-        name: "Rémuneration",
+        name: "Rémun. nette",
         min: 0,
         max: 150000,
         step: 500,
@@ -70,7 +70,7 @@ class AppCtrl {
       bnc: { name: "BNC", min: 0, max: 70000, step: 500, value: 0 },
       nbParts: { name: "Nb Parts", min: 1, max: 10, step: 0.5, value: 1 },
       accre: { name: "ACCRE", notSlider: true, value: false },
-      pfu: { name: 'Flat-Tax', notSlider: true, value: false },
+      pfu: { name: 'Flat-Tax', notSlider: true, value: true },
       forme: { name: "Forme", notSlider: true, value: "SASU" }
     };
 

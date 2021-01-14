@@ -13,7 +13,7 @@ export default class Exercice {
   autresRevenus: number = 0;
   bnc: number = 0;
   nbParts: number = 1;
-  nbMois: number = 18;
+  nbMois: number = 12;
   forme: string = "SASU";
 
   tauxAccreCsSalaire = 0.35;
