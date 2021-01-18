@@ -22,7 +22,7 @@ Le bénéfice net peut être intégralement ou partiellement redistribué sous f
 En 2017, si vous êtes en EURL, les dividendes sont taxés à peu près de la même façon que les rémunérations. Ils n'ont donc pas d'intérêt.
 En revanche, si vous êtes en SASU, les dividendes sont nettement moins taxés. Mais ils passent après l'impôt sur les sociétés. Il faut donc équilibrer au mieux la répartition entre salaire du président et dividendes distribués à l'associé unique. **L'autre point important est que les dividendes ne vous offrent aucune protection sociale**.
 
-De manière générale, l'idée de se rémunérer sur les dividendes signifie que vous avez des économies pour vous permettre de vivre sans revenus issus de votre entreprise pendant un certain temps. A l'issue de votre exercice fiscal vous empochez les dividendes, tout en étant capable de verser 21% d'acompte pour l'impôt sur le revenu (voir la section sur l'impôt sur le revenu). Bref, cela implique une bonne gestion de vos finances personnelle à moyen terme (un à deux ans).`
+De manière générale, l'idée de se rémunérer sur les dividendes signifie que vous avez des économies pour vous permettre de vivre sans revenus issus de votre entreprise pendant un certain temps. A l'issue de votre exercice fiscal vous empochez les dividendes, tout en étant capable de verser 21% d'acompte pour l'impôt sur le revenu (sauf si choix PFU) (voir la section sur l'impôt sur le revenu). Bref, cela implique une bonne gestion de vos finances personnelle à moyen terme (un à deux ans).`
   },
   cotisationsRemu: {
     title: "Cotisations sociales sur rémunération",
@@ -78,7 +78,7 @@ Il faudra donc l'indiquer sur sa feuille d'impôt pour qu'il soit déduit.`
   },
   dividendesCotisations: {
     title: "Cotisations sociales (prélèvements sociaux) sur dividendes",
-    content: `* Si Flat-Tax : 17.2% des dividendes brutes.
+    content: `* Flat-Tax ou pas : 17.2% des dividendes brutes.
     [Source](https://www.economie.gouv.fr/particuliers/prelevement-forfaitaire-unique-pfu)`
   },
   dividendesPFU: {
