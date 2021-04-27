@@ -46,8 +46,15 @@ class AppCtrl {
       },
       ca: { name: "C.A", min: 0, max: 250000, step: 1000, value: 84000 },
       nbMois: { name: "Nb Mois", min: 0, max: 12, step: 1, value: 12 },
-      remuneration: {
+      remunerationNetFiscal: {
         name: "Rémun. nette imposable",
+        min: 0,
+        max: 150000,
+        step: 500,
+        value: 0
+      },
+      remunerationNetVerse: {
+        name: "Rémun. nette versée",
         min: 0,
         max: 150000,
         step: 500,
@@ -198,7 +205,8 @@ class AppCtrl {
     this.exercice.capital = this.params.capital.value;
     this.exercice.ca = this.params.ca.value;
     this.exercice.charges = this.params.charges.value;
-    this.exercice.remuneration = this.params.remuneration.value;
+    this.exercice.remunerationNetFiscal = this.params.remunerationNetFiscal.value;
+    this.exercice.remunerationNetVerse = this.params.remunerationNetVerse.value;
     this.exercice.dividendes = this.params.dividendes.value;
     this.exercice.accre = this.params.accre.value; // === 'true';
     this.exercice.pfu = this.params.pfu.value;// === 'true';

@@ -217,7 +217,7 @@
                         <field label="CA">{{ctrl.result.societe.ca | currency:'€':2}}</field>
                         <field label="Période">{{ctrl.params.nbMois.value}} mois</field>
                         <field label="Charges">{{ctrl.result.societe.charges | currency:'€':2}}</field>
-                        <field label="Rémunération nette">{{ctrl.params.remuneration.value | currency:'€':2}}</field>
+                        <field label="Net fiscal">{{ctrl.params.remuneration.value | currency:'€':2}}</field>
                         <field label="Dividendes">{{ctrl.params.dividendes.value | currency:'€':2}}</field>
                         <field label="Autres revenus">{{ctrl.params.autresRevenus.value | currency:'€':2}}</field>
                     </div>
@@ -261,8 +261,8 @@
                         <field label="Rémunération brute" doc="remunerationBrute">
                             {{ctrl.result.remuneration.brut | currency:'€':2}}
                         </field>
-                        <field label="Rémunération nette" doc="remunerationNette">
-                            {{ctrl.result.remuneration.net | currency:'€':2}}</field>
+                        <field label="Net fiscal" doc="remunerationNette">
+                            {{ctrl.result.remuneration.netFiscal | currency:'€':2}}</field>
                         <field label="Cotisations sociales sur rémunération" doc="cotisationsRemu">
                             {{ctrl.result.remuneration.cotisationsSociales | currency:'€':2}}</field>
                         <div ng-if="ctrl.result.remuneration.cs">
@@ -369,7 +369,7 @@
                             </li>
                         </ul>
                         <field label="Pourcentage de l'IR sur revenus nets (après CS)">
-                            {{ctrl.result.IR.impot/(ctrl.result.dividendes.net+ctrl.result.remuneration.net+ctrl.result.autresRevenus)*100 |
+                            {{ctrl.result.IR.impot/(ctrl.result.dividendes.net+ctrl.result.remuneration.netFiscal+ctrl.result.autresRevenus)*100 |
                             number:2}} %
                         </field>
                     </div>
