@@ -65,28 +65,19 @@ export default class Exercice {
     // Rémunération
     res.remuneration.netFiscal = this.remunerationNetFiscal;
     res.remuneration.netVerse = this.remunerationNetVerse;
-    if (this.forme === "EURL") {
-      this.cotisations.remuneration = res.remuneration.netFiscal;
-      this.cotisations.accre = this.accre;
-      res.remuneration.cs = this.cotisations;
-      res.remuneration.cotisationsSociales = this.cotisations.getCotisations();
-      res.remuneration.brut =
-        res.remuneration.netFiscal + res.remuneration.cotisationsSociales;
-      // https://www.urssaf.fr/portail/home/independant/mes-cotisations/quelles-cotisations/les-contributions-csg-crds/taux-de-la-csg-crds.html
-      res.IR.assiette -= this.cotisations.getCsgCrds() * this.tauxCsgDeductible;
-    }
+
     if (this.forme === "SASU") {
       res.remuneration.cs = undefined;
       // https://www.zefyr.net/blog/sasu-ou-eurl-comparaison-des-revenus-apres-charges-et-ir/
       // http://www.lecoindesentrepreneurs.fr/accre-president-de-sasu-ou-de-sas/
       // Calcul approximatif et pessimiste de cotisations en SASU
       let taux =
-        this.accre && res.remuneration.netFiscal < this.plancherAccreLineaire
+        this.accre && res.remuneration.netVerse < this.plancherAccreLineaire
           ? this.tauxAccreCsSalaire
           : this.tauxCsSalaire;
-      res.remuneration.cotisationsSociales = res.remuneration.netFiscal * taux;
+      res.remuneration.cotisationsSociales = res.remuneration.netVerse * taux;
       res.remuneration.brut =
-        res.remuneration.netFiscal + res.remuneration.cotisationsSociales;
+        res.remuneration.netVerse + res.remuneration.cotisationsSociales;
 
       // let n = res.remuneration.net;
       // // let cs =

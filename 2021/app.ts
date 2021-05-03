@@ -50,14 +50,14 @@ class AppCtrl {
         name: "Rémun. nette imposable",
         min: 0,
         max: 150000,
-        step: 500,
+        step: 250,
         value: 0
       },
       remunerationNetVerse: {
-        name: "Rémun. nette versée",
+        name: "Rémun. nette versée avec PAS",
         min: 0,
         max: 150000,
-        step: 500,
+        step: 250,
         value: 0
       },
       dividendes: {
