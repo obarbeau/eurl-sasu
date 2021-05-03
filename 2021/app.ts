@@ -44,7 +44,7 @@ class AppCtrl {
         step: 500,
         value: 0
       },
-      ca: { name: "C.A", min: 0, max: 250000, step: 1000, value: 84000 },
+      ca: { name: "C.A HT", min: 0, max: 250000, step: 1000, value: 84000 },
       nbMois: { name: "Nb Mois", min: 0, max: 12, step: 1, value: 12 },
       remunerationNetFiscal: {
         name: "Rémun. nette imposable",
